@@ -11,11 +11,12 @@ html{
     margin-left:-100px;
     width:200px;
     text-align:center;
+    z-index: 999 !important;
 }
 #left,#right{
     position:fixed;
     top:0;
-    min-height:200px;
+    min-height:580px;
     width:40%;
     padding:20px;
 }
@@ -23,6 +24,7 @@ html{
 #right{right:0;}
 /* items */
 .item{
+    float: left;
     display:inline-block;
     width:60px;
     height:60px;
@@ -46,6 +48,17 @@ html{
     cursor:pointer;
     background:#506D9E;
     border:3px solid #132239;
+}
+.image{
+    width: 45%;
+    height: 100%;
+    background: #fff;
+    position: fixed;
+    margin-top: -200%;
+    top: 0;
+    right: 0;
+    z-index: 9;
+    transition: all 2s;
 }
 /*button classes*/
 .btn{
