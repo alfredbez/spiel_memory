@@ -27,6 +27,7 @@ module.exports = function(grunt) {
         'js/script.js'
       ],
       css_files: [
+        'css/font/font.css',
         'css/style.css',
       ],
       less_files: [

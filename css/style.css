@@ -19,8 +19,25 @@ html{
     min-height:580px;
     width:40%;
     padding:20px;
+    padding-top: 60px;
+    font-family: sketchgeometricregular;
 }
-#left{left:0;}
+#left{
+    left:0;
+    font-size: 150px;
+    line-height: 400px;
+    text-align: center;
+}
+.image img{
+    -webkit-filter: grayscale(1) blur(0);
+    transition: all 0.6s;
+}
+#right .image .falsch{
+    -webkit-filter: grayscale(1) blur(5px);
+}
+#right .image .richtig{
+    -webkit-filter: grayscale(0) blur(0);
+}
 #right{right:0;}
 /* items */
 .item{
@@ -29,36 +46,45 @@ html{
     width:60px;
     height:60px;
     padding:20px;
-    line-height:60px;
+    line-height:50px;
     text-align:center;
     font-size:50px;
     border-radius:50%;
     background:#132239;
-    color:#fff;
-    border:3px solid #506D9E;
+    background:url(bg.png);
+    color:#000;
+    border:2px solid #000;
     position:relative;
     top:0;
     margin:5px;
     -webkit-transition:all 0.2s;
 }
-.item:hover{
-    border-radius:50% 50% 10% 10%;
+.item:not(.mute):hover{
+    border-radius:50% 50% 12% 12%;
     box-shadow:0 10px 20px 2px rgba(0,0,0,0.5);
     top:-8px;
     cursor:pointer;
-    background:#506D9E;
-    border:3px solid #132239;
+    -webkit-filter: invert(1);
 }
-.image{
+.item.mute{
+    opacity: 0.3;
+}
+.name,.image{
     width: 45%;
     height: 100%;
     background: #fff;
     position: fixed;
     margin-top: -200%;
     top: 0;
-    right: 0;
     z-index: 9;
-    transition: all 2s;
+    text-shadow: 0.15rem 0.15rem 0 #FFFFFF,0.35rem 0.35rem 0 #303030;
+    transition: all 1s cubic-bezier(0, 0, .75, 1.1);
+}
+.name{
+    left: 0;
+}
+.image{
+    right: 0;
 }
 /*button classes*/
 .btn{
