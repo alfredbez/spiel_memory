@@ -22,13 +22,13 @@ $RECYCLE.BIN/
 *node_modules*
 
 # bilder ignorieren
-/bilder
+/bilder/
 
 # generierte JS & CSS Dateien
-*prefixed.css
-*.min.css
-*.concat.js
-*.min.js
+/js/*.concat.js
+/js/script.min.js
+/css/prefixed.css
+/css/style.min.css
 *.gz
 
 # zip-File
