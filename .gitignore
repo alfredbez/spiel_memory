@@ -23,3 +23,13 @@ $RECYCLE.BIN/
 
 # bilder ignorieren
 /bilder
+
+# generierte JS & CSS Dateien
+*prefixed.css
+*.min.css
+*.concat.js
+*.min.js
+*.gz
+
+# zip-File
+spiel_memory.zip
